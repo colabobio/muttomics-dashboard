@@ -114,7 +114,7 @@ function updateLabel(d) {
     el = d3.select(this)
       .append("text")
       .attr("class", "name")
-      .attr("y", -20)//-25
+      .attr("y", -4)//-25
       .attr("x", 93) //95
 
   }
@@ -133,11 +133,11 @@ function updatevalue(d) {
    val = d3.select(this)
       .append("text")
       .attr("class", "value")
-      .attr("y", -4)//  .attr("y", -10)
+      .attr("y", -18)//  .attr("y", -10)
       .attr("x", 93)  //95
   }
 
-  val.text(d.value + "%");
+  val.text(d.value + "%" +"of");
   //console.log(d.value);
 }
 
