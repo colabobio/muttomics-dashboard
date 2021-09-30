@@ -137,7 +137,7 @@ function updatevalue(d) {
       .attr("x", 93)  //95
   }
 
-  val.text(d.value + "%" +"of");
+  val.text(d.value + "%" + " " + "of");
   //console.log(d.value);
 }
 
