@@ -50,7 +50,7 @@ function initializeData() {
 function updateFilteredData() {
   console.log(data);
   filteredData_mix = data.filter(function(d){
-    return( d.breed == "Mixed Breed"
+    return( d.breed == "Mutts"
       )
   });
   //console.log(filteredData_mix);
@@ -65,7 +65,7 @@ function updateFilteredData() {
   //console.log(filteredData2);
 
   filteredData_pure = data.filter(function(d){
-    return( d.breed !== "Mixed Breed"
+    return( d.breed !== "Mutts"
       )
   });
   //console.log(filteredData_pure);
