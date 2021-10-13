@@ -20,12 +20,17 @@ body {
 }
 
 .container{
-    width: 1080px;
+    width: 1140px;
     height: 1200px;
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
+}
+
+.row {
+    margin-right: 0px;
+    margin-left: 0px;
 }
 
 .switch{
@@ -82,7 +87,7 @@ body {
   cursor: pointer;
   text-align: center;
   font-size: 9px;
-  font-weight: 300;
+  font-weight: 400;
   border: none;
   float: left;
   -moz-border-radius: 4px;
@@ -136,6 +141,12 @@ img {
     height: 75%;
 }
 
+.charts-guide {
+    font-size: 15px;
+    font-weight: 300;
+    color: #B2AEAE;
+}
+
 .holder{
   float: left;
   padding-right: 5px;
@@ -180,10 +191,10 @@ img {
   color: #F7F7F7;
 }
 h3{
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 300;
   width: 100%;
-  padding: 3px 0px 5px 0;
+  padding: 3px 0px 7px 0;
   color: #DBD9D9;
 }
 
@@ -219,10 +230,9 @@ color: #F7F7F7;
 }
 
 .name{
-font-size: 9px;
-font-weight: 100;
+font-size: 9.5px;
+font-weight: 200;
 fill: #F7F7F7;
-width: 50%;
 }
 
 /* tooltip
@@ -236,26 +246,26 @@ width: 50%;
 
 .iconhover #tooltiptext {
   visibility: hidden;
-  width: 180px;
-  height: 42px;
-  font-weight: 100;
-  font-size:9px;
-  opacity: 80%;
+  width: 200px;
+  height: 60px;
+  font-weight: 400;
+  font-size:10px;
+  opacity: 70%;
   background-color: black;
   color: #fff;
-  text-align: center;
+  text-align: left;
   border-radius: 6px;
-  padding: 5px 5px;
+  padding: 10px;
   position: absolute;
   z-index: 1;
-  top: -5px;
+  top: 17px;
   left: 120%;
 }
 
 .iconhover #tooltiptext::after {
   content: "";
   position: absolute;
-  top: 50%;
+  top: 20%;
   right: 100%;
   margin-top: -5px;
   border-width: 5px;

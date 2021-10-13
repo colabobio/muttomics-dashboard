@@ -115,7 +115,7 @@ function updateLabel(d) {
       .append("text")
       .attr("class", "name")
       .attr("y", -4)//-25
-      .attr("x", 93) //95
+      .attr("x", 90) //93
 
   }
 
@@ -134,7 +134,7 @@ function updatevalue(d) {
       .append("text")
       .attr("class", "value")
       .attr("y", -18)//  .attr("y", -10)
-      .attr("x", 93)  //95
+      .attr("x", 90)  //93
   }
 
   val.text(d.value + "%" + " " + "of");
@@ -174,7 +174,7 @@ var img = d3.select(this)
       .append("svg")
       .attr("class","imageholder")
       .attr("width", 80)
-      .attr("x", 88)//90
+      .attr("x", 85)//88
       .attr("y", -105) //-110
       .append("svg:image")
       .attr("class", "dogs")
@@ -250,10 +250,10 @@ function updateBars() {
   u.enter()
     .append("div")
     .attr('class','holder')
-    .style("width", "210" +"px")
+    .style("width", "215" +"px")
     .style("position", "relative")
     .append('svg')
-    .attr("width", "210" +"px")
+    .attr("width", "215" +"px")
     .attr('class', 'squares')
     .append('g')
     .attr('class', 'squarepie')
