@@ -153,10 +153,10 @@ function updatepath(d) {
              .attr('class','path')
              .style("stroke", `#bfbfbf`) //#bfbfbf
              .style("fill", "none")
-             .style("stroke-width", `1.5px`)
+             .style("stroke-width", `1px`)
 
 var path= d3.path();
-    path.rect(-3, -85, barWidth + margin.left, barHeight + margin.top + margin.bottom); //x,y,w.h
+    path.rect(-2.5, -84, 85, 88); //x,y,w.h
         
 d3.selectAll(".path").attr("d",path);           
   }
