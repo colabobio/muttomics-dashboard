@@ -198,12 +198,11 @@ function updateBar(d, i) {
  var tiles = getTiles(d.value);
   //console.log(tiles);
 
-//var u = d3.select(this)
 var u = d3.select(this)
     .attr('transform',`translate(3, ${barWidth})`)
     .selectAll("rect")
     .data(tiles);
-    console.log(this)
+    //console.log(this)
 
   u.enter()
     .append("rect")
@@ -244,9 +243,8 @@ var u = d3.select(this)
 function updateBars() {
   d3.selectAll(".holder ").remove(); 
   var u = d3.select("div.purebreeds")
-      .selectAll("g")
-    //.selectAll(".holder")  
-    .data(filteredData);
+      .selectAll("g") 
+      .data(filteredData);
 
   u.enter()
     .append("div")
