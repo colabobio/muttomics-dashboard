@@ -242,6 +242,7 @@ var u = d3.select(this)
 
 
 function updateBars() {
+  d3.selectAll(".holder ").remove(); 
   var u = d3.select("div.purebreeds")
       .selectAll("g")
     //.selectAll(".holder")  
