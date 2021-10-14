@@ -50,7 +50,7 @@ function initializeData() {
 function updateFilteredData() {
   console.log(data);
   filteredData_mix = data.filter(function(d){
-    return( d.breed == "Mixed Breed"
+    return( d.breed == "Mutts"
       )
   });
   //console.log(filteredData_mix);
@@ -65,7 +65,7 @@ function updateFilteredData() {
   //console.log(filteredData2);
 
   filteredData_pure = data.filter(function(d){
-    return( d.breed !== "Mixed Breed"
+    return( d.breed !== "Mutts"
       )
   });
   //console.log(filteredData_pure);
@@ -114,8 +114,8 @@ function updateLabel(d) {
     el = d3.select(this)
       .append("text")
       .attr("class", "name")
-      .attr("y", -20)//-25
-      .attr("x", 93) //95
+      .attr("y", -4)//-25
+      .attr("x", 90) //93
 
   }
 
@@ -133,11 +133,11 @@ function updatevalue(d) {
    val = d3.select(this)
       .append("text")
       .attr("class", "value")
-      .attr("y", -4)//  .attr("y", -10)
-      .attr("x", 93)  //95
+      .attr("y", -18)//  .attr("y", -10)
+      .attr("x", 90)  //93
   }
 
-  val.text(d.value + "%");
+  val.text(d.value + "%" + " " + "of");
   //console.log(d.value);
 }
 
@@ -153,10 +153,10 @@ function updatepath(d) {
              .attr('class','path')
              .style("stroke", `#bfbfbf`) //#bfbfbf
              .style("fill", "none")
-             .style("stroke-width", `1.5px`)
+             .style("stroke-width", `1px`)
 
 var path= d3.path();
-    path.rect(-3, -85, barWidth + margin.left, barHeight + margin.top + margin.bottom); //x,y,w.h
+    path.rect(-2.5, -84, 85, 88); //x,y,w.h
         
 d3.selectAll(".path").attr("d",path);           
   }
@@ -174,7 +174,7 @@ var img = d3.select(this)
       .append("svg")
       .attr("class","imageholder")
       .attr("width", 80)
-      .attr("x", 88)//90
+      .attr("x", 85)//88
       .attr("y", -105) //-110
       .append("svg:image")
       .attr("class", "dogs")
@@ -198,12 +198,11 @@ function updateBar(d, i) {
  var tiles = getTiles(d.value);
   //console.log(tiles);
 
-//var u = d3.select(this)
 var u = d3.select(this)
     .attr('transform',`translate(3, ${barWidth})`)
     .selectAll("rect")
     .data(tiles);
-    console.log(this)
+    //console.log(this)
 
   u.enter()
     .append("rect")
@@ -242,18 +241,18 @@ var u = d3.select(this)
 
 
 function updateBars() {
+  d3.selectAll(".holder ").remove(); 
   var u = d3.select("div.purebreeds")
-      .selectAll("g")
-    //.selectAll(".holder")  
-    .data(filteredData);
+      .selectAll("g") 
+      .data(filteredData);
 
   u.enter()
     .append("div")
     .attr('class','holder')
-    .style("width", "210" +"px")
+    .style("width", "215" +"px")
     .style("position", "relative")
     .append('svg')
-    .attr("width", "210" +"px")
+    .attr("width", "215" +"px")
     .attr('class', 'squares')
     .append('g')
     .attr('class', 'squarepie')
