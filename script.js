@@ -137,7 +137,13 @@ function updatevalue(d) {
       .attr("x", 90)  //93
   }
 
-  val.text(d.value + "%" + " " + "of");
+  val.text(function(d){
+    if (d.value == "0"){
+      return "<1" + "%" + " "+ "of"
+    }else {
+      return d.value + "%" + " "+ "of"
+    }
+  });
   //console.log(d.value);
 }
 
