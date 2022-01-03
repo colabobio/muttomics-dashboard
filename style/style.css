@@ -100,8 +100,8 @@ body {
   background: #747373;
 }
 .button.current {
-  background: #853f3f; //#5339a4 #8A86ED #4362B5 #853f3f #D19D4A #8d4878 
-  color: #fff;
+  background: #1a1716; 
+  color: #f641e8 !important;
 }
 
 /* Create two unequal columns that floats next to each other */
