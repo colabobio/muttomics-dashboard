@@ -185,6 +185,7 @@ img {
 ============================ */
 
 .centered {
+  float: left;
   font-weight: 900;
   font-size: 40px;
   margin: 0 0 6px 0px;
@@ -210,6 +211,7 @@ h4 {
 
 
 .sub-title{
+    float: left;
     font-size: 20px;
     font-weight: 200;
     margin-bottom: .5em;
