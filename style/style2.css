@@ -40,6 +40,22 @@ body {
     color: #B2AEAE;
 }
 
+.arrow{
+  float: right;
+  position: relative;
+  right: 35px;
+  top: 5px;
+}
+
+.arrow-text{   
+    top: 33px;
+    right: 110px;
+    position: relative;
+    float: right;
+    font-size: 8px;
+    font-weight: 100;
+    color: #B2AEAE;
+}
 
 .divder{
     font-size: 17px;
