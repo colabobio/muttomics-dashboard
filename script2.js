@@ -375,7 +375,7 @@ function update() {
 }
 
   
-d3.csv("./data/question_data.for_viz.frac_gt_zero_updated.csv", function(err, test) {
+d3.csv("./data/question_data.for_viz.frac_gt_zero_updated_2.csv", function(err, test) {
   data = test;
   //console.log(data);
   initialize();
