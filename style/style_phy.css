@@ -39,14 +39,14 @@ body {
     font-weight: 100;
     color: #B2AEAE;
     position: relative;
-    top: -10px;
+    top: -15px;
 }
 
 .arrow{
   float: right;
   position: relative;
   right: 35px;
-  top: -5px;
+  top: -10px;
 }
 
 .arrow-text{   
@@ -78,7 +78,7 @@ body {
   width: 100%;
   height: 12%;
   margin-bottom: 35px;
-  margin-top: 45px;
+  margin-top: 35px;
 }
 
 .content{
