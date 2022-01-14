@@ -20,7 +20,7 @@ body {
 }
 
 .container{
-    width: 1140px;
+    width: 1135px;
     height: 1200px;
     padding-right: 15px;
     padding-left: 15px;
@@ -38,13 +38,15 @@ body {
     font-size: 7px;
     font-weight: 100;
     color: #B2AEAE;
+    position: relative;
+    top: -10px;
 }
 
 .arrow{
   float: right;
   position: relative;
   left: 10px;
-  top: 5px;
+  top: -5px;
 }
 
 .arrow-text{   
@@ -73,22 +75,22 @@ body {
 }
 .titles{
   width: 100%;
-  height: 10%;
-  margin-bottom: 30px;
-  margin-top: 40px;
+  height: 12%;
+  margin-bottom: 35px;
+  margin-top: 45px;
 }
 
 .content{
   width: 100%;
-  height: 90%;
+  height: 88%;
 }
 
 /* buttongroup
 ============================ */
 
 #buttongroup{
-    height: 15%;
-    margin-bottom: 30px;
+    height: 17%;
+    margin-bottom: 38px;
 }
 
 .buttons {
@@ -155,7 +157,7 @@ img {
 .charts {
     position: relative;
     width: 100%;
-    height: 75%;
+    height: 71%;
 }
 
 .charts-guide {
