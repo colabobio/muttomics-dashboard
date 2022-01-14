@@ -294,3 +294,51 @@ fill: #F7F7F7;
 .iconhover:hover #tooltiptext {
   visibility: visible;
 }
+
+.cite{
+    float: right;
+    font-size: 10px;
+    font-weight: 400;
+    color: #B2AEAE;
+    margin-bottom: 55px;
+    width: 48%;
+}
+
+.about{
+  float: left;
+}
+
+.dot{
+  float: left;
+  position: relative;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.project{
+  float: left;
+  position: relative;
+}
+
+.team{
+   margin-bottom: 5px;
+}
+
+.dot-last{
+  left: 6%;
+  float: left;
+  position: relative;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.data{
+    left: 6%;
+    position: relative;
+    float: left;
+    font-size: 10px;
+    font-weight: 400;
+    color: #B2AEAE;
+    margin-bottom: 15px;
+}
+
