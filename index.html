@@ -6,7 +6,7 @@
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,900;1,500&display=swap" rel="stylesheet">
-   <link href="style/style.css" rel="stylesheet">
+   <link href="style/style_per.css" rel="stylesheet">
    <title>Darwins' Dogs Data Viz Project</title>
   </head>
   <body>
@@ -16,7 +16,9 @@
           Switch models
           <div class="vector"><a href="./index.html"><img src="./img/chart.png" width="25" height="25"></a></div>
           <div class="divder"> | </div>
-          <div class="fun"><a href="./index_fun.html"><img src="./img/fun.gif" width="25" height="25"></a></div> 
+          <div class="fun"><a href="./physical.html"><img src="./img/traits2.gif" width="25" height="25"></a></div> 
+         </div>
+         <div class="arrow"><img src="./img/arrow-right.png" width="35" height="35"><div class="arrow-text">Click to see breed traits</div>
          </div>
          <h1 class="centered">Every dog is an individual</h1>
           <p class="sub-title">How prevalent are different personalities in breeds & mutts?</p>
@@ -106,7 +108,7 @@
                </div>
         </div> <!-- @end buttongroups -->
         <div class="charts">
-           <p class="charts-guide">How common this dog is:</p>
+           <p class="charts-guide">How common is a dog like this among...</p>
            <div class="row">
             <div class="column left">
              <div class="mixbreed">
@@ -122,10 +124,19 @@
             </div>
            </div> <!-- @end row -->
         </div> <!-- @end charts -->
+        <div class="cite">
+         <p class="about">About</p> 
+         <p class="dot"><b>•</b></p>
+         <p class="project">The Project: <a href="https://darwinsark.org">Darwin’s Ark</a></p> 
+         <p class="dot"><b>•</b></p> 
+         <p class="team">The Team: A collaboration between <a href="https://karlssonlab.org/">Karlsson</a> and <a href="https://co-labo.org/">Colubri</a> Labs</p>
+         <p class="dot-last"><b>•</b></p> 
+         <p class="data">The Data Source: is from surveys on 18,371 dogs, storaged on Dryad at <a href="10.5061/dryad.g4f4qrfr0"> DOI</a></p>
+       </div>
       </div> <!-- @end content -->
      </div> <!-- @end contanior -->
   <script src="lib/d3.min.js"></script>
   <script src="lib/lodash.min.js"></script>
-  <script src="./script.js"></script>
+  <script src="./script_per.js"></script>
 </body>
 </html>

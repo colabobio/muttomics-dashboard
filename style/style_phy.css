@@ -1,0 +1,347 @@
+/* #Basics (Inspired by E. Meyers)
+================================================== */
+@import "./node_modules/nes.css/css/nes.css"
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    font-family: 'Montserrat', sans-serif;}
+
+body {
+    background-color: #333333 !important;
+    display: block;
+}
+
+.container{
+    width: 1140px;
+    height: 1200px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.row {
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.switch{
+    margin-left: 85%;
+    font-size: 7px;
+    font-weight: 100;
+    color: #B2AEAE;
+    position: relative;
+    top: -15px;
+}
+
+.arrow{
+  float: right;
+  position: relative;
+  right: 35px;
+  top: -10px;
+}
+
+.arrow-text{   
+    top: 33px;
+    right: 110px;
+    position: relative;
+    float: right;
+    font-size: 8px;
+    font-weight: 100;
+    color: #B2AEAE;
+}
+
+.divder{
+    font-size: 17px;
+    font-weight: 100;
+    color: #B2AEAE;
+    position: relative;
+    float: left;
+}
+
+
+.fun{
+  margin-left: 5px;
+  position: relative;
+  float: left;
+}
+
+.titles{
+  width: 100%;
+  height: 12%;
+  margin-bottom: 35px;
+  margin-top: 45px;
+}
+
+.content{
+  width: 100%;
+  height: 88%;
+}
+
+/* buttongroup
+============================ */
+
+#buttongroup{
+    height: 17%;
+    margin-bottom: 38px;
+}
+
+.buttons {
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+.button {
+  width: 85px;
+  padding: 5px 5px;
+  margin-right: 0.5px;
+  margin-bottom: 3px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 9px;
+  font-weight: 400;
+  border: none;
+  float: left;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  background: #2F2D2D;
+  color: #d9d7d7;
+
+}
+.button:hover {
+  background: #747373;
+}
+.button.current {
+  background: #1a1716; 
+  color: #24adbf !important;
+}
+
+/* Create two unequal columns that floats next to each other */
+.column {
+  float: left;
+}
+
+.left {
+  width: 20%;
+}
+
+.right {
+  width: 80%;
+  padding-left: 20px;
+}
+
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+img {
+  position: relative;
+  float: left;
+  margin-right: 5px;
+}
+
+/* charts
+============================ */
+
+.charts {
+    position: relative;
+    width: 100%;
+    height: 71%;
+}
+
+.charts-guide {
+    font-size: 15px;
+    font-weight: 300;
+    color: #B2AEAE;
+}
+
+.holder{
+  float: left;
+  padding-right: 5px;
+  padding-bottom: 5px;
+  padding-top:0;
+  padding-left:0;
+
+}
+
+.mixbreed {
+  position: relative;
+  margin-top: 20px;
+  width: 100%;
+
+}
+
+.purebreeds {
+  position: relative;
+  margin-top: 20px;
+  width: 100%;
+}
+
+
+.headerline {
+    position: relative;
+    border-bottom: solid 1px;
+    border-color: #bfbfbf;
+    width: 180px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+
+/* Text
+============================ */
+
+.centered {
+  float: left;
+  font-weight: 900;
+  font-size: 40px;
+  margin: 0 0 6px 0px;
+  color: #F7F7F7;
+}
+h3{
+  font-size: 12px;
+  font-weight: 300;
+  width: 100%;
+  padding: 3px 0px 7px 0;
+  color: #DBD9D9;
+}
+
+h4 {
+  width: 100%;
+  font-size: 13px;
+  font-weight: 300;
+  padding: 3px 0px 5px 0;
+  font-style: normal;
+  line-height: 1.3em;
+  color: #ffffff;
+}
+
+
+.sub-title{
+    float: left;
+    font-size: 20px;
+    font-weight: 200;
+    margin-bottom: .5em;
+    color: #F7F7F7;
+}
+
+.guide{
+    font-size: 15px;
+    font-weight: 300;
+    margin-bottom: .8em;
+    color: #B2AEAE;
+}
+
+.value {
+font-size: 12px;
+font-weight: 500;
+color: #F7F7F7;
+}
+
+.name{
+font-size: 9.5px;
+font-weight: 200;
+fill: #F7F7F7;
+}
+
+/* tooltip
+============================ */
+
+.iconhover {
+  position: relative;
+  display: inline-block;
+  float: left;
+}
+
+.iconhover #tooltiptext {
+  visibility: hidden;
+  width: 200px;
+  height: 60px;
+  font-weight: 400;
+  font-size:10px;
+  opacity: 70%;
+  background-color: black;
+  color: #fff;
+  text-align: left;
+  border-radius: 6px;
+  padding: 10px;
+  position: absolute;
+  z-index: 1;
+  top: 17px;
+  left: 120%;
+}
+
+.iconhover #tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 20%;
+  right: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent black transparent transparent;
+}
+.iconhover:hover #tooltiptext {
+  visibility: visible;
+}
+
+.cite{
+    float: right;
+    font-size: 10px;
+    font-weight: 400;
+    color: #B2AEAE;
+    margin-bottom: 55px;
+    width: 48%;
+}
+
+.about{
+  float: left;
+}
+
+.dot{
+  float: left;
+  position: relative;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.project{
+  float: left;
+  position: relative;
+}
+
+.team{
+   margin-bottom: 5px;
+}
+
+.dot-last{
+  left: 6%;
+  float: left;
+  position: relative;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.data{
+    left: 6%;
+    position: relative;
+    float: left;
+    font-size: 10px;
+    font-weight: 400;
+    color: #B2AEAE;
+    margin-bottom: 15px;
+}
+

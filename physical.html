@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,900;1,500&display=swap" rel="stylesheet">
+    <link href="style/style_phy.css" rel="stylesheet">
+   <title>Darwins' Dogs Data Viz Project</title>
+  </head>
+  <body>
+    <div class="container" >
+       <div class="titles">
+         <div class="switch">
+          Switch models
+          <div class="vector"><a href="./index.html"><img src="./img/personality.gif" width="25" height="25"></a></div>
+          <div class="divder"> | </div>
+          <div class="fun"><a href="./physical.html"><img src="./img/traits_on.gif" width="25" height="25"></a></div> 
+         </div>
+         <div class="arrow"><img src="./img/arrow-left.png" width="35" height="35"><div class="arrow-text">Click to see personality traits</div>
+         </div> 
+         <h1 class="centered">All shapes, sizes, and specialties</h1>
+          <p class="sub-title">What traits especially distinguish dog breeds?</p>
+       </div>
+       <div class="content">
+          <div id="buttongroup">
+               <p class="guide">Select any combination of physical and behavioral traits:</p>
+               <div  id="f1" class="buttons">
+                  <h3>Size</h3>
+                  <button class="button" value="positive">Large</button>
+                  <button class="button current"  value="any">Any</button>
+                  <button class="button"  value="negative">Small</button>  
+               </div>
+               <div  id="f2" class="buttons">
+                  <h3>Ear shape</h3>
+                  <button class="button" value="positive">Pricked</button>
+                  <button class="button current"  value="any">Any</button>
+                  <button class="button"  value="negative">Dropped</button>     
+               </div>
+               <div  id="f3" class="buttons">
+                  <h3>Fur length</h3>
+                  <button class="button" value="positive">Long</button>
+                  <button class="button current"  value="any">Any</button>
+                  <button class="button"  value="negative">Short</button>   
+               </div>
+               <div  id="f4" class="buttons">
+                  <h3>Tail curl</h3>
+                  <button class="button" value="positive">Curly</button>
+                  <button class="button current"  value="any">Any</button>
+                  <button class="button"  value="negative" style="margin-right:0">Not Curly</button>  
+               </div>
+               <div  id="f5" class="buttons">
+                  <h3>Retrieves objects</h3>
+                  <button class="button" value="positive">Not retrieve</button>
+                  <button class="button current"  value="any">Any</button>
+                  <button class="button"  value="negative" style="margin-right:0">Retrieves</button>  
+               </div>
+               <div  id="f6" class="buttons">
+                  <h3>White fur</h3>
+                  <button class="button" value="positive">Little or Not</button>
+                  <button class="button current"  value="any">Any</button>
+                  <button class="button"  value="negative" style="margin-right:0">Mostly or all</button> 
+               </div>
+               <div  id="f7" class="buttons">
+                  <h3>Avoids getting wet</h3>
+                  <button class="button" value="positive">Likes water</button>
+                  <button class="button current"  value="any">Any</button>
+                  <button class="button"  value="negative" style="margin-right:0">Avoids water</button> 
+               </div>
+               <div  id="f8" class="buttons">
+                  <h3>Howls</h3> 
+                  <button class="button" value="positive">Often howls</button>
+                  <button class="button current"  value="any">Any</button>
+                  <button class="button"  value="negative" style="margin-right:0">Rarely howls</button> 
+               </div>
+        </div> <!-- @end buttongroups -->
+        <div class="charts">
+           <p class="charts-guide">How common is a dog like this among...</p>
+           <div class="row">
+            <div class="column left">
+             <div class="mixbreed">
+               <h4>Mixed breed</h4>
+               <div class="headerline "></div>
+             </div>
+            </div>
+            <div class="column right">
+             <div class="purebreeds">
+               <h4>Pure breeds</h4>
+               <div class="headerline "></div>
+             </div>  
+            </div>
+           </div> <!-- @end row -->
+        </div> <!-- @end charts -->
+        <div class="cite">
+         <p class="about">About</p> 
+         <p class="dot"><b>•</b></p>
+         <p class="project">The Project: <a href="https://darwinsark.org/">Darwin’s Ark</a></p> 
+         <p class="dot"><b>•</b></p> 
+         <p class="team">The Team: A collaboration between <a href="https://karlssonlab.org/">Karlsson</a> and <a href="https://co-labo.org/">Colubri</a> Labs</p>
+         <p class="dot-last"><b>•</b></p> 
+         <p class="data">The Data Source: is from surveys on 18,371 dogs, storaged on Dryad at <a href="10.5061/dryad.g4f4qrfr0"> DOI</a></p>
+       </div>
+      </div> <!-- @end content -->
+     </div> <!-- @end contanior -->
+  <script src="lib/d3.min.js"></script>
+  <script src="lib/lodash.min.js"></script>
+  <script src="./script_phy.js"></script>
+</body>
+</html>
