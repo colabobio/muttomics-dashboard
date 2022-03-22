@@ -257,6 +257,44 @@ font-weight: 200;
 fill: #F7F7F7;
 }
 
+/* resetbutton
+============================ */
+.divder-reset{
+    right: 742px;
+    font-size: 15px;
+    font-weight: 100;
+    color: #B2AEAE;
+    position: relative;
+    float: right;
+}
+.button-reset{
+  background: transparent;
+  border: none;
+}
+
+.reset-text{
+   right: 645px;
+    font-size: 15px;
+    font-weight: 300;
+    color: #B2AEAE;
+    position: relative;
+    float: right;
+}
+
+.reset-img{
+   position: relative;
+   margin-top: 1px;
+}
+
+#all {
+    float: right;
+    position: relative;
+    right: 530px;
+    font-size: 15px;
+    font-weight: 300;
+    color: #B2AEAE;
+}
+
 /* tooltip
 ============================ */
 
