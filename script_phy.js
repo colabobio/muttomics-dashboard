@@ -1,5 +1,3 @@
-/* #This waffle chart viz coding inspired by Peter Cook's tiled bar chart
-================================================== */
 var tilesPerRow = 10;
 var tileSize = 8;
 var barPadding = 20;
@@ -53,7 +51,6 @@ function updateFilteredData() {
     return( d.breed == "Mutts"
       )
   });
-  //console.log(filteredData_mix);
 
   filteredData2 = filteredData_mix.filter(function(d) {
     return ( d.f1 === selectedFactor1 && d.f2 === selectedFactor2
@@ -62,13 +59,11 @@ function updateFilteredData() {
            && d.f7 === selectedFactor7 && d.f8 === selectedFactor8
            )
   });
-  //console.log(filteredData2);
 
   filteredData_pure = data.filter(function(d){
     return( d.breed !== "Mutts"
       )
   });
-  //console.log(filteredData_pure);
 
   filteredData1 = filteredData_pure.filter(function(d) {
     return ( d.f1 === selectedFactor1 && d.f2 === selectedFactor2
@@ -118,23 +113,19 @@ function updateLabel(d) {
       .attr("x", 90) //93
 
   }
-
-  //el.text(titleCase(d.breed));
   el.text(d.breed);
 }
 
 function updatevalue(d) {
- // var val = d3.selectAll(".squarepie")
     var val = d3.select(this)
            .select(".value");
     
   if(val.empty()) {
-  // val = d3.selectAll(".squarepie")
    val = d3.select(this)
       .append("text")
       .attr("class", "value")
-      .attr("y", -18)//  .attr("y", -10)
-      .attr("x", 90)  //93
+      .attr("y", -18)
+      .attr("x", 90) 
   }
 
   val.text(function(d){
@@ -144,7 +135,6 @@ function updatevalue(d) {
       return d.value + "%" + " "+ "of"
     }
   });
-  //console.log(d.value);
 }
 
 function updatepath(d) {
@@ -155,9 +145,8 @@ function updatepath(d) {
       if(path.empty()) {
         path = d3.select(this)
              .append("path")
-             //.attr('class','nes-container is-dark with-title')
              .attr('class','path')
-             .style("stroke", `#bfbfbf`) //#bfbfbf
+             .style("stroke", `#bfbfbf`) 
              .style("fill", "none")
              .style("stroke-width", `1px`)
 
@@ -295,8 +284,6 @@ function updateBar_mix() {
     .each(updatevalue)
     .each(updateimg)
     .each(updatepath);
-
-  //u.exit().remove(u);
 }
 
 function initialize() {
@@ -304,7 +291,6 @@ function initialize() {
 
    d3.selectAll("#f1 .button").on("click", function() {
         selectedFactor1 = d3.select(this).attr("value");
-        console.log(selectedFactor1);
         d3.select("#f1 .current").classed("current", false);
         d3.select(this).classed("current", true);
         update();
@@ -312,7 +298,6 @@ function initialize() {
 
    d3.selectAll("#f2 .button").on("click", function() {
         selectedFactor2 = d3.select(this).attr("value");
-        //console.log(selectedFactor2);
         d3.select("#f2 .current").classed("current", false);
         d3.select(this).classed("current", true);
         update();
@@ -320,7 +305,6 @@ function initialize() {
 
    d3.selectAll("#f3 .button").on("click", function() {
         selectedFactor3 = d3.select(this).attr("value");
-        //console.log(selectedFactor2);
         d3.select("#f3 .current").classed("current", false);
         d3.select(this).classed("current", true);
         update();
@@ -328,7 +312,6 @@ function initialize() {
 
    d3.selectAll("#f4 .button").on("click", function() {
         selectedFactor4 = d3.select(this).attr("value");
-        //console.log(selectedFactor2);
         d3.select("#f4 .current").classed("current", false);
         d3.select(this).classed("current", true);
         update();
@@ -336,7 +319,6 @@ function initialize() {
 
    d3.selectAll("#f5 .button").on("click", function() {
         selectedFactor5 = d3.select(this).attr("value");
-        //console.log(selectedFactor2);
         d3.select("#f5 .current").classed("current", false);
         d3.select(this).classed("current", true);
         update();
@@ -344,7 +326,6 @@ function initialize() {
 
    d3.selectAll("#f6 .button").on("click", function() {
         selectedFactor6 = d3.select(this).attr("value");
-        //console.log(selectedFactor2);
         d3.select("#f6 .current").classed("current", false);
         d3.select(this).classed("current", true);
         update();
@@ -352,7 +333,6 @@ function initialize() {
 
    d3.selectAll("#f7 .button").on("click", function() {
         selectedFactor7 = d3.select(this).attr("value");
-        //console.log(selectedFactor2);
         d3.select("#f7 .current").classed("current", false);
         d3.select(this).classed("current", true);
         update();
@@ -360,7 +340,6 @@ function initialize() {
 
    d3.selectAll("#f8 .button").on("click", function() {
         selectedFactor8 = d3.select(this).attr("value");
-        //console.log(selectedFactor2);
         d3.select("#f8 .current").classed("current", false);
         d3.select(this).classed("current", true);
         update();
@@ -374,6 +353,53 @@ function update() {
     updateBar_mix();
 }
 
+d3.select("#all").on('click', function(){
+
+ d3.selectAll('#labels *').remove();
+
+        selectedFactor1 = "any";
+        d3.select("#f1 .current").classed("current", false);
+        d3.select('#f1 .button[value="any"]').classed("current", true);
+        //console.log(selectedFactor1);
+        update();
+
+        selectedFactor2 = "any";
+        d3.select("#f2 .current").classed("current", false);
+        d3.select('#f2 .button[value="any"]').classed("current", true);
+        console.log(selectedFactor2);
+        update();
+
+        selectedFactor3 = "any";
+        d3.select("#f3 .current").classed("current", false);
+        d3.select('#f3 .button[value="any"]').classed("current", true);
+        update();
+
+        selectedFactor4 = "any";
+        d3.select("#f4 .current").classed("current", false);
+        d3.select('#f4 .button[value="any"]').classed("current", true);
+        update();
+
+        selectedFactor5 = "any";
+        d3.select("#f5 .current").classed("current", false);
+        d3.select('#f5 .button[value="any"]').classed("current", true);
+        update();
+
+        selectedFactor6 = "any";
+        d3.select("#f6 .current").classed("current", false);
+        d3.select('#f6 .button[value="any"]').classed("current", true);
+        update();
+
+        selectedFactor7 = "any";
+        d3.select("#f7 .current").classed("current", false);
+        d3.select('#f7 .button[value="any"]').classed("current", true);
+        update();
+
+        selectedFactor8 = "any";
+        d3.select("#f8 .current").classed("current", false);
+        d3.select('#f8 .button[value="any"]').classed("current", true);
+        update();
+
+    })
   
 d3.csv("./data/question_data.for_viz.frac_gt_withZeros.csv", function(err, test) {
   data = test;

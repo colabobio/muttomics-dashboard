@@ -1,5 +1,4 @@
-/* #Basics (Inspired by E. Meyers)
-================================================== */
+
 @import "./node_modules/nes.css/css/nes.css"
 * { 
     margin: 0;
@@ -90,7 +89,7 @@ body {
 ============================ */
 
 #buttongroup{
-    height: 17%;
+    height: 15%;
     margin-bottom: 38px;
 }
 
@@ -255,6 +254,44 @@ color: #F7F7F7;
 font-size: 9.5px;
 font-weight: 200;
 fill: #F7F7F7;
+}
+
+/* resetbutton
+============================ */
+.divder-reset{
+    right: 632px;
+    font-size: 15px;
+    font-weight: 100;
+    color: #B2AEAE;
+    position: relative;
+    float: right;
+}
+.button-reset{
+  background: transparent;
+  border: none;
+}
+
+.reset-text{
+    right: 535px;
+    font-size: 15px;
+    font-weight: 300;
+    color: #B2AEAE;
+    position: relative;
+    float: right;
+}
+
+.reset-img{
+   position: relative;
+   margin-top: 1px;
+}
+
+#all {
+    float: right;
+    position: relative;
+    right: 420px;
+    font-size: 15px;
+    font-weight: 300;
+    color: #B2AEAE;
 }
 
 /* tooltip
