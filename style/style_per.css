@@ -118,8 +118,9 @@ html {
     flex-flow: row wrap;
     justify-content: space-around;
     width: 100%;
-    height: 70vh;
+    height: 55vh;
     margin-top: 13%;
+    margin-bottom: 3%;
     font-weight: 400;
     font-size: 20px;
     color: #bdbdbd;
@@ -153,7 +154,7 @@ html {
     height: 8rem;
     padding-top: 5px;
     padding-left: 47%;
-    height: 95px;
+    height: 155px;
 }
 
 .arrow-down {
