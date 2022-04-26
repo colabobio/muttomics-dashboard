@@ -29,6 +29,7 @@ var selectedFactor6 = "any";
 var selectedFactor7 = "any";
 var selectedFactor8 = "any";
 
+
 function initializeData() {
   data = data.map(function(d) {
     return {
@@ -48,7 +49,7 @@ function initializeData() {
  } 
 
 function updateFilteredData() {
-  console.log(data);
+  //console.log(data);
   filteredData_mix = data.filter(function(d){
     return( d.breed == "Mutts"
       )
@@ -62,11 +63,13 @@ function updateFilteredData() {
            && d.f7 === selectedFactor7 && d.f8 === selectedFactor8
            )
   });
+  //console.log(filteredData2);
 
   filteredData_pure = data.filter(function(d){
     return( d.breed !== "Mutts"
       )
   });
+  //console.log(filteredData_pure);
 
   filteredData1 = filteredData_pure.filter(function(d) {
     return ( d.f1 === selectedFactor1 && d.f2 === selectedFactor2
@@ -94,6 +97,12 @@ function getTiles(num) {
   return tiles
 }
 
+function smoothScroll(){
+    document.querySelector('#element').scrollIntoView({
+        behavior: 'smooth'
+    });
+}
+
 function titleCase(str) {
    var splitStr = str.toLowerCase().split(' ');
    for (var i = 0; i < splitStr.length; i++) {
@@ -106,7 +115,7 @@ function titleCase(str) {
 function updateLabel(d) {
   var el = d3.select(this)
              .select(".name");
-    console.log(this);
+    //console.log(this);
 
   if(el.empty()) {
     el = d3.select(this)
@@ -116,6 +125,8 @@ function updateLabel(d) {
       .attr("x", 90) //93
 
   }
+
+  //el.text(titleCase(d.breed));
   el.text(d.breed);
 }
 
@@ -124,11 +135,12 @@ function updatevalue(d) {
            .select(".value");
     
   if(val.empty()) {
+  // val = d3.selectAll(".squarepie")
    val = d3.select(this)
       .append("text")
       .attr("class", "value")
-      .attr("y", -18)
-      .attr("x", 90)  
+      .attr("y", -18)//  .attr("y", -10)
+      .attr("x", 90)  //93
   }
 
   val.text(function(d){
@@ -149,8 +161,9 @@ function updatepath(d) {
       if(path.empty()) {
         path = d3.select(this)
              .append("path")
+             //.attr('class','nes-container is-dark with-title')
              .attr('class','path')
-             .style("stroke", `#bfbfbf`) //#bfbfbf
+             .style("stroke", `#807f7f`) 
              .style("fill", "none")
              .style("stroke-width", `1px`)
 
@@ -178,6 +191,7 @@ var img = d3.select(this)
       .append("svg:image")
       .attr("class", "dogs")
       .attr("xlink:href",  function(d) { return d.img;})
+      //.attr("xlink:href", "./img/breeds/test.png")
       .attr("width", 60)
       .attr("height", 60)
       .attr("transform", "translate(0, 5)")
@@ -288,6 +302,7 @@ function updateBar_mix() {
     .each(updateimg)
     .each(updatepath);
 
+  //u.exit().remove(u);
 }
 
 function initialize() {
@@ -385,7 +400,7 @@ function initialize() {
           if(labeltext === 'positive'){
         return "very independent"
        }else if (labeltext === 'negative') {
-        return "eager to please" }
+        return "eager to please people" }
         else if (labeltext === 'any') {
         return d3.select('#f4-labels').remove() }
         });
@@ -406,9 +421,9 @@ function initialize() {
         .attr("y", 0)
         .text(function(){
           if(labeltext === 'positive'){
-        return "communicates displeasure"
+        return "hard to annoy"
        }else if (labeltext === 'negative') {
-        return "hard to annoy" }
+        return "communicates displeasure" }
         else if (labeltext === 'any') {
         return d3.select('#f5-labels').remove() }
         });
@@ -485,7 +500,6 @@ function initialize() {
     });
 }
 
-
 function update() {
     updateFilteredData();
     updateBars();
@@ -539,6 +553,8 @@ d3.select("#all").on('click', function(){
         update();
 
     })
+
+
   
 d3.csv("./data/factor_data.for_viz.frac_gt_withZeros.csv", function(err, test) {
   data = test;
