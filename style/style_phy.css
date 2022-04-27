@@ -567,6 +567,7 @@ fill: #F7F7F7;
 }
 
 .cite{
+    position: relative;
     float: right;
     font-size: 10px;
     font-weight: 400;

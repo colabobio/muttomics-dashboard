@@ -602,7 +602,9 @@ fill: #F7F7F7;
 }
 
 .cite{
+    position: relative;
     float: right;
+    top: 300px;
     font-size: 10px;
     font-weight: 400;
     color: #B2AEAE;
