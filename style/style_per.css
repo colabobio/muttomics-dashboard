@@ -1,3 +1,5 @@
+/* #Basics (Inspired by E. Meyers)
+================================================== */
 @import "./node_modules/nes.css/css/nes.css"
 * { 
     margin: 0;
@@ -10,13 +12,18 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     padding: 0;
     border: 0;
     vertical-align: baseline;
-    font-family: 'Montserrat', sans-serif;}
+    font-family: 'Montserrat', sans-serif;
+   }
+
 
 body {
-    background-color: #333333 !important;
+    background-color: #232222 !important;
     display: block;
 }
 
+html {
+  
+}
 
 .container{
     width: 1135px;
@@ -27,29 +34,30 @@ body {
     margin-left: auto;
 }
 
+/* the first page
+============================ */
 .headline{
     width: 100%;
     height: 100vh;
     margin-top: 15%;
     font-weight: 900;
-    font-size: 60px;
-    color: #F7F7F7 ;
+    font-size: 50px;
+    color: #d6d4d4 ;
 }
 
-.question{
-    width: 100%;
-    height: 100vh;
-    margin-top: 30%;
-    font-weight: 900;
-    font-size: 60px;
-    color: #F7F7F7 ;
+.green{
+  color: #b9d432;
+}
+
+.pink{
+  color: #e56da8;
 }
 
 .two-col {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
-    height: 2000px;
+    height: 1720px;
     position: relative;
 }
 
@@ -58,47 +66,102 @@ body {
     flex: 1 2rem;
     position: sticky;
     top: 0;
-    height: 500px;
-    padding-left: 4rem;
+    height: 580px;
     padding-top: 15rem;
 }
 
 .right-scroll{
     order: 2;
     flex: 1 2rem;
-    padding-top: 12rem;
+    padding-top: 10rem;
     padding-right: 10rem;
     padding-left: 8rem;
     line-height: 2rem;
 }
 
-
 #right1, #right2, #right3 {
     display: block;
-    margin-block-start: 1em;
+    margin-block-start: 9em;
     margin-block-end: 1em;
-    margin-inline-start: 0px;
+    margin-inline-start: 1empx;
     margin-inline-end: 0px;
-    color: white;
+    width: 350px;
+    padding: 8px 8px;
+    margin-right: 5px;
+    margin-bottom: 3px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 400;
+    text-align: left;
+    background: transparent;
+    color: #ffffff;
+    top: 30px;
+    right: 150px;
+    opacity: 75%;
+}
+
+.right3-text{
+  color: #e8e8e8;
+  font-size: 15px;
+  font-weight: 400;
+  float: left;
+  padding-top: 95px;
+  text-align: left;
+  line-height: 18px;
+}
+
+
+/* the second page
+============================ */
+.question{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    width: 100%;
+    height: 55vh;
+    margin-top: 13%;
+    margin-bottom: 3%;
+    font-weight: 400;
+    font-size: 20px;
+    color: #bdbdbd;
+}
+
+.question-2{
+  font-size: 15px;
+  font-weight: 200;
+  padding-top: 5px;
+}
+
+.sideleft {
+    order: 1;
+    flex: 1 2rem;
+    padding-left: 0rem;
+    padding-right: 0rem;
+}
+
+.sideright {
+    order: 2;
+    flex: 1 2rem;
 }
 
 .scroll {
-    padding-left: 15rem;
-    font-weight: 400px;
-    font-size: 12px;
+    padding-left: 42%;
+    font-size: 10px;
+    color: #B2AEAE;
 }
 
 #arrow {
     height: 8rem;
-    padding-top: 0;
-    padding-left: 55rem;
+    padding-top: 5px;
+    padding-left: 47%;
+    height: 155px;
 }
 
 .arrow-down {
     width: 0;
-    border-left: 20px solid transparent;
-    border-right: 20px solid transparent;
-    border-top: 25px solid white;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 15px solid #b9d432;
 }
 
 .row {
@@ -106,14 +169,6 @@ body {
     margin-left: 0px;
 }
 
-.switch{
-    margin-left: 85%;
-    font-size: 7px;
-    font-weight: 100;
-    color: #B2AEAE;
-    position: relative;
-    top: -15px;
-}
 
 #all{
 float: right;
@@ -124,13 +179,30 @@ font-weight: 300;
 color: #B2AEAE;
 }
 
+
+
+/*scrolling 
+============================== */
+
+
+#element {
+  width: 100%;
+
+  scroll-margin-block-start: 30px;
+  /*Adds margin to the top of the viewport*/
+  
+  scroll-margin-block-end: 110px;
+  /*Adds margin to the bottom of the viewport*/
+}
+
+
 /* resetbutton
 ============================ */
 .divder-reset{
     right: 742px;
     font-size: 15px;
     font-weight: 100;
-    color: #B2AEAE;
+    color: #807f7f;
     position: relative;
     float: right;
 }
@@ -140,10 +212,10 @@ color: #B2AEAE;
 }
 
 .reset-text{
-   right: 645px;
+    right: 645px;
     font-size: 15px;
     font-weight: 300;
-    color: #B2AEAE;
+    color: #807f7f;
     position: relative;
     float: right;
 }
@@ -160,7 +232,7 @@ color: #B2AEAE;
     float: left;
     font-size: 15px;
     font-weight: 300;
-    color: #B2AEAE;
+    color: #807f7f;
 }
 
 #f1-labels, #f2-labels, #f3-labels, #f4-labels, #f5-labels, #f6-labels, #f7-labels, #f8-labels{
@@ -185,8 +257,8 @@ color: #B2AEAE;
 .arrow{
   float: right;
   position: relative;
-  left: 10px;
-  top: -10px;
+  left: 115px;
+  top: 10px;
 }
 
 .arrow-text{   
@@ -194,29 +266,113 @@ color: #B2AEAE;
     right: 40px;
     position: relative;
     float: right;
-    font-size: 8px;
+    font-size: 9px;
     font-weight: 100;
     color: #B2AEAE;
 }
 
+/* switch modes
+============================ */
 .divder{
-    font-size: 17px;
+    font-size: 30px;
     font-weight: 100;
-    color: #B2AEAE;
+    color: #534a4a;
     position: relative;
     float: left;
+    right: 65px;
 }
 
-.fun{
-  margin-left: 5px;
-  position: relative;
-  float: left;
+.switch{
+   position: relative;
+   top: -30px;
 }
+
+.mode-title{
+    margin-left: 85%;
+    font-size: 10px;
+    font-weight: 100;
+    color: #B2AEAE;    
+    top: -15px;
+    position: relative;
+    float: left;
+    left: 15px;
+}
+
+.mode1{
+    background-color: #1a1716;
+    width: 45px;
+    padding: 3px 9px;
+    cursor: pointer;
+    border-radius: 4px;
+    text-align: center;
+    position: relative;
+    float: right;
+    border: 2px solid #b9d432;
+    top: -12px;
+    right: 152px; 
+}
+
+.mode1:hover {
+  background-color: #423f3f;
+  box-shadow: 0 10px 14px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19); 
+}
+
+.mode2{
+    margin-left: 5px;
+    background-color: #423f3f;
+    border: none;
+    width: 48px;
+    padding: 5px 13px;
+    cursor: pointer;
+    border-radius: 3px;
+    text-align: center;
+    position: relative;
+    float: right;
+    top: -12px;
+    left: 40px;
+}
+
+.mode2:hover {
+  background-color: #423f3f;
+  box-shadow: 0 10px 14px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19); 
+}
+
+.mode1-title{
+    width: 50px;
+    font-size: 10px;
+    font-weight: 100;
+    color: #7d7a7a;    
+    top: -10px;
+    right: 257px;
+    position: relative;
+    float: right;
+}
+
+.mode1-title-text{
+    font-size: 10px;
+    font-weight: 100;
+    color: #7d7a7a;    
+    left: 30px;
+    position: relative;
+}
+.mode2-title{
+    width: 100px;
+    font-size: 10px;
+    font-weight: 100;
+    color: #7d7a7a;    
+    top: -10px;
+    left: 44px;
+    position: relative;
+    float: right;
+}
+
 .titles{
   width: 100%;
   height: 12%;
   margin-bottom: 35px;
   margin-top: 45px;
+  float: left;
+  position: relative;
 }
 .header{
   width: 1800px;
@@ -228,6 +384,8 @@ color: #B2AEAE;
 .content{
   width: 100%;
   height: 88%;
+  float: left;
+  position: relative;
 }
 
 /* buttongroup
@@ -235,7 +393,7 @@ color: #B2AEAE;
 
 #buttongroup{
     height: 21%;
-    margin-bottom: 38px;
+    margin-bottom: 33px;
 }
 
 .buttons {
@@ -300,15 +458,18 @@ img {
 ============================ */
 
 .charts {
+    float: left;
     position: relative;
     width: 100%;
     height: 71%;
+    margin-top: 20px;
+
 }
 
 .charts-guide {
     font-size: 15px;
     font-weight: 300;
-    color: #B2AEAE;
+    color: #d6d4d4;
 }
 
 .holder{
@@ -337,7 +498,7 @@ img {
 .headerline {
     position: relative;
     border-bottom: solid 1px;
-    border-color: #bfbfbf;
+    border-color: #807f7f;
     width: 180px;
     display: flex;
     align-items: center;
@@ -352,7 +513,7 @@ img {
   font-weight: 900;
   font-size: 40px;
   margin: 0 0 6px 0px;
-  color: #F7F7F7;
+  color: #d6d4d4;
 }
 h3{
   font-size: 12px;
@@ -369,7 +530,7 @@ h4 {
   padding: 3px 0px 5px 0;
   font-style: normal;
   line-height: 1.3em;
-  color: #ffffff;
+  color: #807f7f;
 }
 
 
@@ -377,14 +538,14 @@ h4 {
     font-size: 20px;
     font-weight: 200;
     margin-bottom: .5em;
-    color: #F7F7F7;
+    color: #d6d4d4;
 }
 
 .guide{
     font-size: 15px;
     font-weight: 300;
     margin-bottom: 1em;
-    color: #B2AEAE;
+    color: #807f7f;
 }
 
 .value {

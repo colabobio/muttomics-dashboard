@@ -1,3 +1,5 @@
+/* #This waffle chart viz coding inspired by Peter Cook's tiled bar chart
+================================================== */
 var tilesPerRow = 10;
 var tileSize = 8;
 var barPadding = 20;
@@ -46,11 +48,12 @@ function initializeData() {
  } 
 
 function updateFilteredData() {
-  console.log(data);
+  //console.log(data);
   filteredData_mix = data.filter(function(d){
     return( d.breed == "Mutts"
       )
   });
+  //console.log(filteredData_mix);
 
   filteredData2 = filteredData_mix.filter(function(d) {
     return ( d.f1 === selectedFactor1 && d.f2 === selectedFactor2
@@ -59,11 +62,13 @@ function updateFilteredData() {
            && d.f7 === selectedFactor7 && d.f8 === selectedFactor8
            )
   });
+  //console.log(filteredData2);
 
   filteredData_pure = data.filter(function(d){
     return( d.breed !== "Mutts"
       )
   });
+  //console.log(filteredData_pure);
 
   filteredData1 = filteredData_pure.filter(function(d) {
     return ( d.f1 === selectedFactor1 && d.f2 === selectedFactor2
@@ -103,7 +108,7 @@ function titleCase(str) {
 function updateLabel(d) {
   var el = d3.select(this)
              .select(".name");
-    console.log(this);
+    //console.log(this);
 
   if(el.empty()) {
     el = d3.select(this)
@@ -113,19 +118,23 @@ function updateLabel(d) {
       .attr("x", 90) //93
 
   }
+
+  //el.text(titleCase(d.breed));
   el.text(d.breed);
 }
 
 function updatevalue(d) {
+ // var val = d3.selectAll(".squarepie")
     var val = d3.select(this)
            .select(".value");
     
   if(val.empty()) {
+  // val = d3.selectAll(".squarepie")
    val = d3.select(this)
       .append("text")
       .attr("class", "value")
-      .attr("y", -18)
-      .attr("x", 90) 
+      .attr("y", -18)//  .attr("y", -10)
+      .attr("x", 90)  //93
   }
 
   val.text(function(d){
@@ -135,6 +144,7 @@ function updatevalue(d) {
       return d.value + "%" + " "+ "of"
     }
   });
+  //console.log(d.value);
 }
 
 function updatepath(d) {
@@ -145,8 +155,9 @@ function updatepath(d) {
       if(path.empty()) {
         path = d3.select(this)
              .append("path")
+             //.attr('class','nes-container is-dark with-title')
              .attr('class','path')
-             .style("stroke", `#bfbfbf`) 
+             .style("stroke", `#807f7f`) 
              .style("fill", "none")
              .style("stroke-width", `1px`)
 
@@ -284,6 +295,8 @@ function updateBar_mix() {
     .each(updatevalue)
     .each(updateimg)
     .each(updatepath);
+
+  //u.exit().remove(u);
 }
 
 function initialize() {
@@ -291,6 +304,7 @@ function initialize() {
 
    d3.selectAll("#f1 .button").on("click", function() {
         selectedFactor1 = d3.select(this).attr("value");
+        console.log(selectedFactor1);
         d3.select("#f1 .current").classed("current", false);
         d3.select(this).classed("current", true);
         update();
@@ -298,6 +312,7 @@ function initialize() {
 
    d3.selectAll("#f2 .button").on("click", function() {
         selectedFactor2 = d3.select(this).attr("value");
+        //console.log(selectedFactor2);
         d3.select("#f2 .current").classed("current", false);
         d3.select(this).classed("current", true);
         update();
@@ -344,7 +359,6 @@ function initialize() {
         d3.select(this).classed("current", true);
         update();
     });
-
 }
 
 function update() {
@@ -400,6 +414,7 @@ d3.select("#all").on('click', function(){
         update();
 
     })
+
   
 d3.csv("./data/question_data.for_viz.frac_gt_withZeros.csv", function(err, test) {
   data = test;
