@@ -207,11 +207,11 @@ color: #B2AEAE;
 
 .mode1-title{
     width: 50px;
-    font-size: 10px;
+    font-size: 11px;
     font-weight: 100;
     color: #7d7a7a;    
-    top: 18px;
-    right: 58px;
+    top: 20px;
+    right: 61px;
     position: relative;
 }
 
@@ -224,10 +224,10 @@ color: #B2AEAE;
 }
 .mode2-title{
     width: 150px;
-    font-size: 10px;
+    font-size: 11px;
     font-weight: 100;
     color: #7d7a7a;    
-    top: -8px;
+    top: -10px;
     left: 50px;
     position: relative;
 }
@@ -262,7 +262,7 @@ color: #B2AEAE;
     text-align: center;
     position: relative;
     float: right;
-    top: -38px;
+    top: -40px;
     right: 72px;
 }
 
