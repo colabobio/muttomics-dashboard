@@ -663,3 +663,14 @@ fill: #F7F7F7;
 
 }
 
+.repo, .paper{
+    position: relative;
+    float: left;
+    font-size: 10px;
+    font-weight: 400;
+    color: #B2AEAE;
+    margin-bottom: 40px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
